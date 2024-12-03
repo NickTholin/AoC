@@ -37,8 +37,8 @@
         public static int FindSimilarityScore(string twoLists)
         {
             var (left, right) = ParseLocations(twoLists);
-            //grouping of both lists allows us to iterate over left list with repeated numbers already accummulated 
-            //var leftMap = left.GroupBy(x => x).ToDictionary(x => x.Key, x => x.Count());
+            
+            //projecting to map keeps us from O=N^2.
             var rightMap = right.GroupBy(x => x).ToDictionary(x => x.Key, x => x.Count());
 
             var sum = 0;
