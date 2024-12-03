@@ -1,4 +1,3 @@
-using AoC2024;
 using FluentAssertions;
 
 namespace AoC2024.Tests
