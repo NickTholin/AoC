@@ -18,46 +18,45 @@
                 .Split(Environment.NewLine)
                 .Select(x => x.Split(" "))
                 .Select(x => x
-                    .Select(y => int.Parse(y))
+                    .Select(int.Parse)
                     .ToList());
 
-            var safeReports = 0;
-
-            var isDecreasing = (int x, int y) => x - y > 0;
-            var isIncreasing = (int x, int y) => x - y < 0;
-            var isInRange = (int x, int y) => Math.Abs(x - y) <= 3;
-
-            foreach (var report in reportsList)
-            {
-                Trend trend;
-                var isSafe = true;
-
-                if (report[0] < report[1])
-                    trend = Trend.Increasing;
-                else if (report[0] > report[1])
-                    trend = Trend.Decreasing;
-                else
-                    continue; //unsafe because levels don't increase or decrease.
-
-                for (int i = 0; i < report.Count - 1; i++)
-                {
-                    var current = report[i];
-                    var next = report[i + 1];
-
-                    if (trend == Trend.Decreasing && isDecreasing(current, next) && isInRange(current, next)) continue;
-                    if (trend == Trend.Increasing && isIncreasing(current, next) && isInRange(current, next)) continue;
-
-                    isSafe = false;
-                    break;
-                }
-
-                if (isSafe)
-                    safeReports++;
-            }
-
-            return safeReports;
+            return reportsList.Count(IsReportSafe);
         }
 
+        public static bool IsReportSafe(List<int> report)
+        {
+            Trend trend;
 
+            if (report[0] < report[1])
+                trend = Trend.Increasing;
+            else if (report[0] > report[1])
+                trend = Trend.Decreasing;
+            else
+                return false; //unsafe because levels don't increase or decrease.
+
+            for (var i = 0; i < report.Count - 1; i++)
+            {
+                var current = report[i];
+                var next = report[i + 1];
+
+                if (IsNextLevelSafe(next, current, trend))
+                    continue;
+
+                return false;
+            }
+
+            return true;
+        }
+
+        public static bool IsNextLevelSafe(int nextLevel, int currentLevel, Trend expectedTrend)
+        {
+            bool IsDecreasing(int x, int y) => x - y > 0;
+            bool IsIncreasing(int x, int y) => x - y < 0;
+            bool IsInRange(int x, int y) => Math.Abs(x - y) <= 3 && x - y != 0; // [-3,0)(0, 3]
+            bool DoesFollowTrend(Trend trend, int x, int y) => trend == Trend.Decreasing ? IsDecreasing(x, y) : IsIncreasing(x, y);
+            
+            return IsInRange(currentLevel, nextLevel) && DoesFollowTrend(expectedTrend, currentLevel, nextLevel);
+        }
     }
 }
