@@ -2012,7 +2012,10 @@ var input2 =
 60 63 66 67 68 70 71
 38 41 43 44 45 47";
 
-var safeReports = AoC2024.Day2.CalculateNumberOfSafeReports(input2);
+var safeReports = AoC2024.Day2.CalculateNumberOfSafeReports(input2, false);
 Console.WriteLine($"Safe Reports: {safeReports}");
+
+var safeReportsWithDampener = AoC2024.Day2.CalculateNumberOfSafeReports(input2, true);
+Console.WriteLine($"Safe Reports w/ error dampener: {safeReportsWithDampener}");
 
 Console.ReadKey();
