@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System.Drawing;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace AoC2024;
@@ -25,9 +27,64 @@ public class Day4
         return allTransformations.Sum(x => x.Split(WordToSearch).Length -1 + x.Split(reverseXmas).Length - 1); // -1 for each tail after each split with no match.
     }
 
-    private static IEnumerable<string> Reverse(IEnumerable<string> original)
+    public static int FindCrossMas(string input)
     {
-        return original.Select(x => new string(x.Reverse().ToArray()));
+        List<string> wordSearch = input.Split(Environment.NewLine).ToList();
+
+        var width = wordSearch[0].Length - 1;
+        var height = wordSearch.Count - 1;
+
+        var allAs = FindAllAs(wordSearch, height, width);
+        var crossMasCount = countAllCrossMas(wordSearch, allAs, height, width);
+
+        return crossMasCount;
+    }
+
+    private static List<Point> FindAllAs(List<string> wordSearch, int height, int width)
+    {
+        var aLocations = new List<Point>();
+
+        for (var x = 0; x <= width; x++)
+        {
+            for (var y = 0; y <= height; y++)
+            {
+                //grid is accessed first array as height, so y,x Will leave points as x,y as standard axis
+                if (wordSearch[y][x] == 'A')
+                    aLocations.Add(new Point(x, y));
+            }
+        }
+
+        return aLocations;
+    }
+
+    private static int countAllCrossMas(List<string> wordSearch, List<Point> points, int height, int width)
+    {
+        var masCount = 0;
+        foreach (var a in points)
+        {
+            var topLeft = new Point(a.X - 1, a.Y - 1);
+            var topRight = new Point(a.X + 1, a.Y - 1);
+            var bottomLeft =new Point(a.X - 1, a.Y + 1);
+            var bottomRight = new Point(a.X + 1, a.Y + 1);
+
+            if (topLeft.IsOutOfBounds(height, width) || 
+                topRight.IsOutOfBounds(height, width) ||
+                bottomLeft.IsOutOfBounds(height, width) || 
+                bottomRight.IsOutOfBounds(height, width))
+            {
+                continue;
+            }
+
+            if (((wordSearch[topLeft.Y][topLeft.X] == 'M' && wordSearch[bottomRight.Y][bottomRight.X] == 'S') ||
+                (wordSearch[topLeft.Y][topLeft.X] == 'S' && wordSearch[bottomRight.Y][bottomRight.X] == 'M')) &&
+                ((wordSearch[topRight.Y][topRight.X] == 'M' && wordSearch[bottomLeft.Y][bottomLeft.X] == 'S') ||
+                (wordSearch[topRight.Y][topRight.X] == 'S' && wordSearch[bottomLeft.Y][bottomLeft.X] == 'M')))
+            {
+                masCount++;
+            }
+        }
+
+        return masCount;
     }
 
     private static IEnumerable<string> GetUpDownWordSearch(List<string> original)
@@ -123,5 +180,14 @@ public class Day4
         }
 
         return lines;
+    }
+
+
+    public record struct Point(int X, int Y)
+    {
+        public bool IsOutOfBounds(int height, int width)
+        {
+            return (X < 0 || X > width || Y < 0 || Y > height);
+        }
     }
 }

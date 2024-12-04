@@ -17,18 +17,21 @@ var safeReportsWithDampener = AoC2024.Day2.CalculateNumberOfSafeReports(input2, 
 Console.WriteLine($"Safe Reports w/ error dampener: {safeReportsWithDampener}");
 
 //Day3
-var input3 = File.ReadAllText(@"./input/day3.txt");
+//var input3 = File.ReadAllText(@"./input/day3.txt");
 
-var sumOfMuls = AoC2024.Day3.CalculatedUncorruptedMulInstructions(input3);
-Console.WriteLine($"Sum of Muls: {sumOfMuls}");
+//var sumOfMuls = AoC2024.Day3.CalculatedUncorruptedMulInstructions(input3);
+//Console.WriteLine($"Sum of Muls: {sumOfMuls}");
 
-var sumOfMulsWithEnablement = AoC2024.Day3.CalculatedUncorruptedMulInstructionsWithEnablement(input3);
-Console.WriteLine($"Sum of Muls(enablement): {sumOfMulsWithEnablement}");
+//var sumOfMulsWithEnablement = AoC2024.Day3.CalculatedUncorruptedMulInstructionsWithEnablement(input3);
+//Console.WriteLine($"Sum of Muls(enablement): {sumOfMulsWithEnablement}");
 
 //Day4
 var input4 = File.ReadAllText(@"./input/day4.txt");
 
 var xMasCount = AoC2024.Day4.FindXmas(input4);
 Console.WriteLine($"Number of Xmas: {xMasCount}");
+
+var crossMasCount = AoC2024.Day4.FindCrossMas(input4);
+Console.WriteLine($"Number of CrossMas: {crossMasCount}");
 
 Console.ReadKey();
