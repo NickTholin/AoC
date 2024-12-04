@@ -35,7 +35,7 @@ public class Day3
     public static int CalculatedUncorruptedMulInstructionsWithEnablement(string input)
     {
         const string DO = "do()";
-        const string DONT = "dont()";
+        const string DONT = "don't()";
 
         var mulPattern = @"mul\((\d{1,3}),(\d{1,3})\)";
         var doPattern = @"do\(\)";
