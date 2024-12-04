@@ -25,4 +25,10 @@ Console.WriteLine($"Sum of Muls: {sumOfMuls}");
 var sumOfMulsWithEnablement = AoC2024.Day3.CalculatedUncorruptedMulInstructionsWithEnablement(input3);
 Console.WriteLine($"Sum of Muls(enablement): {sumOfMulsWithEnablement}");
 
+//Day4
+var input4 = File.ReadAllText(@"./input/day4.txt");
+
+var xMasCount = AoC2024.Day4.FindXmas(input4);
+Console.WriteLine($"Number of Xmas: {xMasCount}");
+
 Console.ReadKey();
