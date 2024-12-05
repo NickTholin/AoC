@@ -1,9 +1,6 @@
-﻿using System.Drawing;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
+﻿using System.Text;
 
-namespace AoC2024;
+namespace AoC;
 public class Day4
 {
     public static int FindXmas(string input)

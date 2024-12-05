@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AoC2024\AoC2024.csproj" />
+    <ProjectReference Include="..\AoC2024\AoC.csproj" />
   </ItemGroup>
 
 </Project>

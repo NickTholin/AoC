@@ -1,6 +1,5 @@
-﻿using System.Reflection.Metadata.Ecma335;
-using System.Text.RegularExpressions;
-namespace AoC2024;
+﻿using System.Text.RegularExpressions;
+namespace AoC;
 
 public class Day3
 {

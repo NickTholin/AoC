@@ -1,19 +1,21 @@
-﻿//Day 1
+﻿using AoC;
+
+//Day 1
 var input = File.ReadAllText(@"./input/day1.txt");
 
-var distance = AoC2024.Day1.FindTotalDistance(input);
+var distance = Day1.FindTotalDistance(input);
 Console.WriteLine($"Distance: {distance}");
 
-var simularityScore = AoC2024.Day1.FindSimilarityScore(input);
+var simularityScore = Day1.FindSimilarityScore(input);
 Console.WriteLine($"Simularity Score: {simularityScore}");
 
 //Day2
 var input2 = File.ReadAllText(@"./input/day2.txt");
 
-var safeReports = AoC2024.Day2.CalculateNumberOfSafeReports(input2, false);
+var safeReports = Day2.CalculateNumberOfSafeReports(input2, false);
 Console.WriteLine($"Safe Reports: {safeReports}");
 
-var safeReportsWithDampener = AoC2024.Day2.CalculateNumberOfSafeReports(input2, true);
+var safeReportsWithDampener = Day2.CalculateNumberOfSafeReports(input2, true);
 Console.WriteLine($"Safe Reports w/ error dampener: {safeReportsWithDampener}");
 
 //Day3
@@ -28,10 +30,10 @@ Console.WriteLine($"Safe Reports w/ error dampener: {safeReportsWithDampener}");
 //Day4
 var input4 = File.ReadAllText(@"./input/day4.txt");
 
-var xMasCount = AoC2024.Day4.FindXmas(input4);
+var xMasCount = Day4.FindXmas(input4);
 Console.WriteLine($"Number of Xmas: {xMasCount}");
 
-var crossMasCount = AoC2024.Day4.FindCrossMas(input4);
+var crossMasCount = Day4.FindCrossMas(input4);
 Console.WriteLine($"Number of CrossMas: {crossMasCount}");
 
 Console.ReadKey();

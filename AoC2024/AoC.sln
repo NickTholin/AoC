@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AoC2024", "AoC2024\AoC2024.csproj", "{D9EA683C-524A-4F5C-9DB6-66FA3E4005E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AoC", "AoC2024\AoC.csproj", "{D9EA683C-524A-4F5C-9DB6-66FA3E4005E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AoC2024.Tests", "AoC2024.Tests\AoC2024.Tests.csproj", "{382AF540-9859-4287-B6FF-7A90D3331BCF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AoC.Tests", "AoC2024.Tests\AoC.Tests.csproj", "{382AF540-9859-4287-B6FF-7A90D3331BCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AoC2024.Console", "AoC2024.Console\AoC2024.Console.csproj", "{92065B1F-AD7B-45F5-94FB-D80879AC141D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AoC.Console", "AoC2024.Console\AoC.Console.csproj", "{92065B1F-AD7B-45F5-94FB-D80879AC141D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

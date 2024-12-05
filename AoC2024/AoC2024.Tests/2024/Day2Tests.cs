@@ -1,5 +1,5 @@
 ﻿
-namespace AoC2024.Tests
+namespace AoC.Tests
 {
     public class Day2Tests
     {

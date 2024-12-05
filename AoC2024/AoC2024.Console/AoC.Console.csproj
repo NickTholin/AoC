@@ -8,30 +8,30 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Input\Day3.txt" />
-    <None Remove="Input\Day4.txt" />
+    <None Remove="2024\Input\Day3.txt" />
+    <None Remove="2024\Input\Day4.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Input\Day2.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Input\Day1.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Input\Day3.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Input\Day4.txt">
+    <Content Include="2024\Input\Day2.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AoC2024\AoC2024.csproj" />
+    <Content Include="2024\Input\Day1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2024\Input\Day3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2024\Input\Day4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AoC2024\AoC.csproj" />
   </ItemGroup>
 
 </Project>
