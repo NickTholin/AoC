@@ -56,5 +56,10 @@ Console.WriteLine($"2024 - Day 5 - Part 1: {sumOfMidpoints}");
 var sumOfFixedMidpoints = Day5.FindSumOfMiddleOfFixedPrintedPageNumbers(input2024Day5);
 Console.WriteLine($"2024 - Day 5 - Part 2: {sumOfFixedMidpoints}");
 
+var input2024Day6 = File.ReadAllText(@"./2024/input/day6.txt");
+var traversions = Day6.GetDistinctPositionsOfGuardPath(input2024Day6);
+Console.WriteLine($"2024 - Day 6 - Part 1: {traversions}");
+
+
 
 Console.ReadKey();
