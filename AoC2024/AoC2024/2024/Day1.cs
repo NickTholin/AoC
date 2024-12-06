@@ -1,4 +1,4 @@
-﻿namespace AoC;
+﻿namespace AoC_2024;
 
 /// <summary>
 /// https://adventofcode.com/2024/day/1

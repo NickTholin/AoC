@@ -1,3 +1,5 @@
+using AoC_2024;
+
 namespace AoC.Tests;
 
 public class Day1Tests

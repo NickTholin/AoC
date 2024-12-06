@@ -396,4 +396,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-/AoC2024/AoC2024.Console/Input
+/AoC2024/AoC2024.Console/2024/Input
+/AoC2024/AoC2024.Console/2015/Input
+
