@@ -40,26 +40,27 @@ var input = File.ReadAllText(@"./input/day1.txt");
 
 //2015
 
-var input2015Day1 = File.ReadAllText(@"./2015/input/day1.txt");
+//var input2015Day1 = File.ReadAllText(@"./2015/input/day1.txt");
 
-var level = AoC_2015.Day1.DetermineEndingFloor(input2015Day1);
-Console.WriteLine($"2015 - Day 1 - Part 1: {level}");
+//var level = AoC_2015.Day1.DetermineEndingFloor(input2015Day1);
+//Console.WriteLine($"2015 - Day 1 - Part 1: {level}");
 
-var basementInstruction = AoC_2015.Day1.DetermineBasementInstrunction(input2015Day1);
-Console.WriteLine($"2015 - Day 1 - Part 2: {basementInstruction}");
+//var basementInstruction = AoC_2015.Day1.DetermineBasementInstrunction(input2015Day1);
+//Console.WriteLine($"2015 - Day 1 - Part 2: {basementInstruction}");
 
-var input2024Day5 = File.ReadAllText(@"./2024/input/day5.txt");
+//var input2024Day5 = File.ReadAllText(@"./2024/input/day5.txt");
 
-var sumOfMidpoints = Day5.FindSumOfMiddleOfPrintedPageNumbers(input2024Day5);
-Console.WriteLine($"2024 - Day 5 - Part 1: {sumOfMidpoints}");
+//var sumOfMidpoints = Day5.FindSumOfMiddleOfPrintedPageNumbers(input2024Day5);
+//Console.WriteLine($"2024 - Day 5 - Part 1: {sumOfMidpoints}");
 
-var sumOfFixedMidpoints = Day5.FindSumOfMiddleOfFixedPrintedPageNumbers(input2024Day5);
-Console.WriteLine($"2024 - Day 5 - Part 2: {sumOfFixedMidpoints}");
+//var sumOfFixedMidpoints = Day5.FindSumOfMiddleOfFixedPrintedPageNumbers(input2024Day5);
+//Console.WriteLine($"2024 - Day 5 - Part 2: {sumOfFixedMidpoints}");
 
 var input2024Day6 = File.ReadAllText(@"./2024/input/day6.txt");
 var traversions = Day6.GetDistinctPositionsOfGuardPath(input2024Day6);
 Console.WriteLine($"2024 - Day 6 - Part 1: {traversions}");
 
-
+var numberOfBlockablePaths = Day6.GetNumberOfBlockablePaths(input2024Day6);
+Console.WriteLine($"2024 - Day 6 - Part 2: {numberOfBlockablePaths}");
 
 Console.ReadKey();
