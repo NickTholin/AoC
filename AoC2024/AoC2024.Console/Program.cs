@@ -63,4 +63,12 @@ Console.WriteLine($"2024 - Day 6 - Part 1: {traversions}");
 var numberOfBlockablePaths = Day6.GetNumberOfBlockablePaths(input2024Day6);
 Console.WriteLine($"2024 - Day 6 - Part 2: {numberOfBlockablePaths}");
 
+
+
+var input2024Day8 = File.ReadAllText(@"./2024/input/day8.txt");
+var numAntenodes = Day8.NumberOfAntinodes(input2024Day8);
+Console.WriteLine($"2024 - Day 8 - Part 2: {numAntenodes}");
+
+
+
 Console.ReadKey();
