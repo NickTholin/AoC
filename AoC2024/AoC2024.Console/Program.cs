@@ -56,19 +56,30 @@ var input = File.ReadAllText(@"./input/day1.txt");
 //var sumOfFixedMidpoints = Day5.FindSumOfMiddleOfFixedPrintedPageNumbers(input2024Day5);
 //Console.WriteLine($"2024 - Day 5 - Part 2: {sumOfFixedMidpoints}");
 
-var input2024Day6 = File.ReadAllText(@"./2024/input/day6.txt");
-var traversions = Day6.GetDistinctPositionsOfGuardPath(input2024Day6);
-Console.WriteLine($"2024 - Day 6 - Part 1: {traversions}");
+//var input2024Day6 = File.ReadAllText(@"./2024/input/day6.txt");
+//var traversions = Day6.GetDistinctPositionsOfGuardPath(input2024Day6);
+//Console.WriteLine($"2024 - Day 6 - Part 1: {traversions}");
 
-var numberOfBlockablePaths = Day6.GetNumberOfBlockablePaths(input2024Day6);
-Console.WriteLine($"2024 - Day 6 - Part 2: {numberOfBlockablePaths}");
-
-
-
-var input2024Day8 = File.ReadAllText(@"./2024/input/day8.txt");
-var numAntenodes = Day8.NumberOfAntinodes(input2024Day8);
-Console.WriteLine($"2024 - Day 8 - Part 2: {numAntenodes}");
+//var numberOfBlockablePaths = Day6.GetNumberOfBlockablePaths(input2024Day6);
+//Console.WriteLine($"2024 - Day 6 - Part 2: {numberOfBlockablePaths}");
 
 
+
+//var input2024Day8 = File.ReadAllText(@"./2024/input/day8.txt");
+//var numAntenodes = Day8.NumberOfAntinodes(input2024Day8);
+//Console.WriteLine($"2024 - Day 8 - Part 2: {numAntenodes}");
+
+//var input2024Day9 = File.ReadAllText(@"./2024/input/day9.txt");
+//var checksum = Day9.FindChecksumOfCompressedFileSystem(input2024Day9);
+//Console.WriteLine($"2024 - Day 9 - Part 1: {checksum}");
+
+
+//day 10
+var input2024Day10 = File.ReadAllText(@"./2024/input/day10.txt");
+var numDistinctTrailHeads = Day10.FindTrailHeads(input2024Day10);
+Console.WriteLine($"2024 - Day 10 - Part 1: {numDistinctTrailHeads}");
+
+var numTrailHeads = Day10.FindTrailHeads(input2024Day10, false);
+Console.WriteLine($"2024 - Day 10 - Part 2: {numTrailHeads}");
 
 Console.ReadKey();
