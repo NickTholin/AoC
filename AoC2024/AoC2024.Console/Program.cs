@@ -64,12 +64,12 @@ var input = File.ReadAllText(@"./input/day1.txt");
 //Console.WriteLine($"2024 - Day 6 - Part 2: {numberOfBlockablePaths}");
 
 //day7
-var input2024Day7 = File.ReadAllText(@"./2024/input/day7.txt");
-var sumWorkableEquations = Day7.SumWorkableEquations(input2024Day7);
-Console.WriteLine($"2024 - Day 7 - Part 1: {sumWorkableEquations}");
+//var input2024Day7 = File.ReadAllText(@"./2024/input/day7.txt");
+//var sumWorkableEquations = Day7.SumWorkableEquations(input2024Day7);
+//Console.WriteLine($"2024 - Day 7 - Part 1: {sumWorkableEquations}");
 
-var sumWorkableEquations2 = Day7.SumWorkableEquations(input2024Day7, true);
-Console.WriteLine($"2024 - Day 7 - Part 2: {sumWorkableEquations2}");
+//var sumWorkableEquations2 = Day7.SumWorkableEquations(input2024Day7, true);
+//Console.WriteLine($"2024 - Day 7 - Part 2: {sumWorkableEquations2}");
 
 
 //var input2024Day8 = File.ReadAllText(@"./2024/input/day8.txt");
@@ -82,11 +82,20 @@ Console.WriteLine($"2024 - Day 7 - Part 2: {sumWorkableEquations2}");
 
 
 //day 10
-var input2024Day10 = File.ReadAllText(@"./2024/input/day10.txt");
-var numDistinctTrailHeads = Day10.FindTrailHeads(input2024Day10);
-Console.WriteLine($"2024 - Day 10 - Part 1: {numDistinctTrailHeads}");
+//var input2024Day10 = File.ReadAllText(@"./2024/input/day10.txt");
+//var numDistinctTrailHeads = Day10.FindTrailHeads(input2024Day10);
+//Console.WriteLine($"2024 - Day 10 - Part 1: {numDistinctTrailHeads}");
 
-var numTrailHeads = Day10.FindTrailHeads(input2024Day10, false);
-Console.WriteLine($"2024 - Day 10 - Part 2: {numTrailHeads}");
+//var numTrailHeads = Day10.FindTrailHeads(input2024Day10, false);
+//Console.WriteLine($"2024 - Day 10 - Part 2: {numTrailHeads}");
+
+//day 11
+var input2024Day11 = File.ReadAllText(@"./2024/input/day11.txt");
+var stonesAfterBlinking25 = Day11.TotalNumberOfStonesAfterBlinking(input2024Day11, 25);
+Console.WriteLine($"2024 - Day 11 - Part 1: {stonesAfterBlinking25}");
+
+
+var stonesAfterBlinking75 = Day11.TotalNumberOfStonesAfterBlinking(input2024Day11, 75);
+Console.WriteLine($"2024 - Day 11 - Part 2: {stonesAfterBlinking75}");
 
 Console.ReadKey();

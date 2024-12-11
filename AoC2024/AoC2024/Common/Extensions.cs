@@ -13,6 +13,12 @@ public static class Extensions
             )
             .ToArray();
     }
+    public static IEnumerable<T> ToIEnumerable<T>(this string input, Func<string, T> converter, char? delimiter = null)
+    {
+        return delimiter.HasValue && input.Contains(delimiter.Value)
+            ? input.Split(delimiter.Value).Select(converter)
+            : input.Select(c => converter(c.ToString()));
+    }
 
     public static List<(int x, int y)> FindCoordinates<T>(this T[][] array, T target)
     {
