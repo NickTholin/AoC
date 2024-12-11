@@ -63,6 +63,13 @@ var input = File.ReadAllText(@"./input/day1.txt");
 //var numberOfBlockablePaths = Day6.GetNumberOfBlockablePaths(input2024Day6);
 //Console.WriteLine($"2024 - Day 6 - Part 2: {numberOfBlockablePaths}");
 
+//day7
+var input2024Day7 = File.ReadAllText(@"./2024/input/day7.txt");
+var sumWorkableEquations = Day7.SumWorkableEquations(input2024Day7);
+Console.WriteLine($"2024 - Day 7 - Part 1: {sumWorkableEquations}");
+
+var sumWorkableEquations2 = Day7.SumWorkableEquations(input2024Day7, true);
+Console.WriteLine($"2024 - Day 7 - Part 2: {sumWorkableEquations2}");
 
 
 //var input2024Day8 = File.ReadAllText(@"./2024/input/day8.txt");
