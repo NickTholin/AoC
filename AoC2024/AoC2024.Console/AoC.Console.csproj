@@ -8,15 +8,32 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="2024\Input\Day10.txt" />
+    <None Remove="2024\Input\Day11.txt" />
+    <None Remove="2024\Input\Day12.txt" />
     <None Remove="2024\Input\Day6.txt" />
+    <None Remove="2024\Input\Day7.txt" />
     <None Remove="2024\Input\Day8.txt" />
+    <None Remove="2024\Input\Day9.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="2024\Input\Day10.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2024\Input\Day12.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2024\Input\Day7.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2024\Input\Day9.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="2024\Input\Day6.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="2024\Input\Day8.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -26,6 +43,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="2024\Input\Day11.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

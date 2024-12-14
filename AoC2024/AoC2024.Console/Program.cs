@@ -89,13 +89,19 @@ var input = File.ReadAllText(@"./input/day1.txt");
 //var numTrailHeads = Day10.FindTrailHeads(input2024Day10, false);
 //Console.WriteLine($"2024 - Day 10 - Part 2: {numTrailHeads}");
 
-//day 11
-var input2024Day11 = File.ReadAllText(@"./2024/input/day11.txt");
-var stonesAfterBlinking25 = Day11.TotalNumberOfStonesAfterBlinking(input2024Day11, 25);
-Console.WriteLine($"2024 - Day 11 - Part 1: {stonesAfterBlinking25}");
+////day 11
+//var input2024Day11 = File.ReadAllText(@"./2024/input/day11.txt");
+//var stonesAfterBlinking25 = Day11.TotalNumberOfStonesAfterBlinking(input2024Day11, 25);
+//Console.WriteLine($"2024 - Day 11 - Part 1: {stonesAfterBlinking25}");
 
 
-var stonesAfterBlinking75 = Day11.TotalNumberOfStonesAfterBlinking(input2024Day11, 75);
-Console.WriteLine($"2024 - Day 11 - Part 2: {stonesAfterBlinking75}");
+//var stonesAfterBlinking75 = Day11.TotalNumberOfStonesAfterBlinking(input2024Day11, 75);
+//Console.WriteLine($"2024 - Day 11 - Part 2: {stonesAfterBlinking75}");
+
+//day 12
+var input2024Day12 = File.ReadAllText(@"./2024/input/day12.txt");
+var cost = Day12.FindCostOfGardenFence(input2024Day12);
+Console.WriteLine($"2024 - Day 12 - Part 1: {cost}");
+
 
 Console.ReadKey();
